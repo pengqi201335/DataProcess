@@ -1,6 +1,7 @@
 import scipy.signal as signal
 import numpy as np
 import pylab as pl
+import matplotlib.pyplot as plt
 
 
 # 滑动平均滤波算法实现
@@ -25,8 +26,11 @@ num = signal.chirp(T, f0=10, t1=0.5, f1=1000.0)
 result = sliding_average(num.copy(), 30)
 
 # 绘图对比
-pl.subplot(2, 1, 1)
-pl.plot(num)
-pl.subplot(2, 1, 2)
-pl.plot(result, color='red')
-pl.show()
+plt.xlabel('x')
+plt.ylabel('y')
+plt.subplot(2, 1, 1)
+plt.plot(num)
+plt.subplot(2, 1, 2)
+plt.plot(result, color='red')
+plt.savefig('outfile1.png')
+plt.show()
