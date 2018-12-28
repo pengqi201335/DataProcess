@@ -1,6 +1,5 @@
 import scipy.signal as signal
 import numpy as np
-import pylab as pl
 import matplotlib.pyplot as plt
 
 
